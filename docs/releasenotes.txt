@@ -1,4 +1,12 @@
 *****************************
+	Unstable
+*****************************
+
+Changes
+- Get the org list from PORK async, so it's not blocking anything anymore
+- Chanse changed URL format of PORK
+
+*****************************
 	Version 4.2:
 *****************************
 This is the last version named Budabot and the last one to support PHP5.
