@@ -918,9 +918,10 @@ class LootListsController {
 	 */
 	public function totwCommand($message, $channel, $sender, $sendto, $args) {
 		$blob = $this->findRaidLoot('Temple of the Three Winds', 'Armor');
-		$blob .= $this->findRaidLoot('Temple of the Three Winds', 'Symbiants');
 		$blob .= $this->findRaidLoot('Temple of the Three Winds', 'Misc');
 		$blob .= $this->findRaidLoot('Temple of the Three Winds', 'NCU');
+		$blob .= $this->findRaidLoot('Temple of the Three Winds', 'Rings');
+		$blob .= $this->findRaidLoot('Temple of the Three Winds', 'Symbiants');
 		$blob .= $this->findRaidLoot('Temple of the Three Winds', 'Weapons');
 		$msg = $this->text->makeBlob("Temple of the Three Winds Loot", $blob);
 

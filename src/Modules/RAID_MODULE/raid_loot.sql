@@ -447,12 +447,21 @@ INSERT INTO raid_loot (raid, category, ql, name, comment, multiloot, aoid) VALUE
 ('Pyramid of Home', 'Weapons', 300, 'Corrupted Lady of Wisdom', 'MA', 1, 302947),
 ('Pyramid of Home', 'Weapons', 300, 'Corrupted Lord of Wisdom', 'MA', 1, 302945),
 
+('Temple of the Three Winds', 'Rings', 1, 'Bloodthrall Ring', '', 1, NULL),
+('Temple of the Three Winds', 'Rings', 1, 'Notum Ring of the Three', 'green: BM+MM', 1, 305488),
+('Temple of the Three Winds', 'Rings', 1, 'Notum Ring of the Three', 'red: MC+TS', 1, 305489),
+('Temple of the Three Winds', 'Rings', 1, 'Notum Ring of the Three', 'orange: PM+SI', 1, 305490),
+('Temple of the Three Winds', 'Rings', 1, 'Ring of Blighted Flesh', '', 1, NULL),
+('Temple of the Three Winds', 'Rings', 1, 'Ring of Purifying Flame', '', 1, NULL),
+('Temple of the Three Winds', 'Rings', 1, 'Ring of the Coiled Serpent', '', 1, NULL),
 ('Temple of the Three Winds', 'Armor', 1, 'Desecrated Flesh', '', 1, NULL),
 ('Temple of the Three Winds', 'Armor', 1, 'Fist of Heavens', 'MA', 1, NULL),
 ('Temple of the Three Winds', 'Armor', 1, 'Gartua''s Second Coat', '', 1, NULL),
 ('Temple of the Three Winds', 'Armor', 1, 'Mountain Razing Gauntlets', '', 1, NULL),
+('Temple of the Three Winds', 'Armor', 1, 'Sanguine Vambrace', '', 1, NULL),
 ('Temple of the Three Winds', 'Armor', 1, 'Strength of the Immortal', '', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Blessing of the Gripper', '', 1, NULL),
+('Temple of the Three Winds', 'Symbiants', 300, 'Ethereal Embrace', 'Shade', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Grasp of the Immortal', 'MA', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Inner Peace', '', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Keeper''s Vigor', '', 1, NULL),
@@ -460,7 +469,6 @@ INSERT INTO raid_loot (raid, category, ql, name, comment, multiloot, aoid) VALUE
 ('Temple of the Three Winds', 'Symbiants', 1, 'Notum Graft', '', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Vision of the Heretic', '', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Wit of the Immortal', 'MP, NT', 1, NULL),
-('Temple of the Three Winds', 'Symbiants', 300, 'Ethereal Embrace', 'Shade', 1, NULL),
 ('Temple of the Three Winds', 'Misc', 1, 'Knowledge of the Immortal One', '+160 to tradeskills', 1, NULL),
 ('Temple of the Three Winds', 'Misc', 1, 'Sacred Text of the Immortal One', 'Doc', 1, NULL),
 ('Temple of the Three Winds', 'Misc', 1, 'Summoner''s Staff of Dismissal', 'MP, Crat, Engi', 1, NULL),
@@ -472,9 +480,9 @@ INSERT INTO raid_loot (raid, category, ql, name, comment, multiloot, aoid) VALUE
 ('Temple of the Three Winds', 'Weapons', 300, 'Ceremonial Blade', '1HE', 1, NULL),
 ('Temple of the Three Winds', 'Weapons', 300, 'Corrupted Edge', '2HE', 1, NULL),
 ('Temple of the Three Winds', 'Weapons', 300, 'Envoy to Chaos', 'Pistol', 1, NULL),
-('Temple of the Three Winds', 'Weapons', 300, 'Uklesh''s Talon', 'Piercing', 1, NULL),
 ('Temple of the Three Winds', 'Weapons', 1, 'Obsidian Desecrator', '2HE', 1, NULL),
-('Temple of the Three Winds', 'Weapons', 1, 'Sacred Chalice', 'Doc', 1, NULL);
+('Temple of the Three Winds', 'Weapons', 1, 'Sacred Chalice', 'Doc', 1, NULL),
+('Temple of the Three Winds', 'Weapons', 300, 'Uklesh''s Talon', 'Piercing', 1, NULL);
 
 CREATE INDEX idx_raid_loot_raid ON raid_loot(raid);
 CREATE INDEX idx_raid_loot_category ON raid_loot(category);
