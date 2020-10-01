@@ -6,6 +6,9 @@ Changes
 - Get the org list from PORK async, so it's not blocking anything anymore
 - Chanse changed URL format of PORK
 
+Features
+- Added !mloot command to bulk add from AOIA+
+
 *****************************
 	Version 4.2:
 *****************************

@@ -18,6 +18,12 @@ namespace Budabot\Modules\RAID_MODULE;
  *		help        = 'flatroll.txt'
  *	)
  *	@DefineCommand(
+ *		command     = 'mloot .+',
+ *		accessLevel = 'rl',
+ *		description = 'Add multiple items to loot',
+ *		help        = 'flatroll.txt'
+ *	)
+ *	@DefineCommand(
  *		command     = 'loot .+',
  *		accessLevel = 'rl',
  *		description = 'Modify the loot list',
@@ -337,7 +343,7 @@ class RaidController {
 	 * @param string $sender    The name of the player adding the item
 	 * @return void
 	 */
-	public function addLootItem($input, $multiloot, $sender) {
+	public function addLootItem($input, $multiloot, $sender, $surpressMessage=false) {
 		//Check if the item is a link
 		if (preg_match("|^<a href=\"itemref://(\\d+)/(\\d+)/(\\d+)\">(.+)</a>(.*)$|i", $input, $arr)) {
 			$item_ql = $arr[3];
@@ -397,6 +403,9 @@ class RaidController {
 			$this->loot[$key] = $item;
 		}
 
+		if ($surpressMessage) {
+			return;
+		}
 		$msg = "$sender added <highlight>{$item->name}<end> (x$item->multiloot) to Slot <highlight>#$key<end>.";
 		$msg .= " To add use <symbol>add $key, or <symbol>rem to remove yourself.";
 		$this->chatBot->sendPrivate($msg);
@@ -777,5 +786,36 @@ class RaidController {
 			}
 		}
 		return null;
+	}
+
+	/**
+	 * Add multiple items to the loot roll
+	 *
+	 * @HandlesCommand("mloot .+")
+	 * @Matches("/^mloot (.+)$/i")
+	 */
+	public function mlootCommand($message, $channel, $sender, $sendto, $args) {
+		if (!$this->chatLeaderController->checkLeaderAccess($sender)) {
+			$sendto->reply("You must be Raid Leader to use this command.");
+			return;
+		}
+
+		$input = $args[1];
+		$syntaxCorrect = preg_match_all(
+			"|(<a [^>]*?href=['\"]itemref://\d+/\d+/\d+['\"]>.+?</a>)|",
+			$input,
+			$matches
+		);
+		if (!$syntaxCorrect) {
+			$sendto->reply("No items were identified. Only item references are supported.");
+			return;
+		}
+		foreach ($matches[1] as $item) {
+			$this->addLootItem($item, 1, $sender, true);
+		}
+		$lootList = $this->getCurrentLootList();
+		$this->chatBot->sendPrivate(
+			"{$sender} added " . count($matches[1]) . " items to the {$lootList}."
+		);
 	}
 }
