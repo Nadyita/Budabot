@@ -4,7 +4,8 @@
 
 Changes
 - Get the org list from PORK async, so it's not blocking anything anymore
-- Chanse changed URL format of PORK
+- Chase changed URL format of PORK
+- Added new subway 201+ loot with !subway and grouped all other
 
 Features
 - Added !mloot command to bulk add from AOIA+

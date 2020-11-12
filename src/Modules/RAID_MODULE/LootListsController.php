@@ -220,6 +220,12 @@ namespace Budabot\Modules\RAID_MODULE;
  *		description = 'Shows possible TOTW 201+ loot',
  *		help        = 'totw.txt'
  *	)
+ *	@DefineCommand(
+ *		command     = 'subway',
+ *		accessLevel = 'all',
+ *		description = 'Shows possible Subway 201+ loot',
+ *		help        = 'subway.txt'
+ *	)
  */
 class LootListsController {
 
@@ -924,6 +930,20 @@ class LootListsController {
 		$blob .= $this->findRaidLoot('Temple of the Three Winds', 'Symbiants');
 		$blob .= $this->findRaidLoot('Temple of the Three Winds', 'Weapons');
 		$msg = $this->text->makeBlob("Temple of the Three Winds Loot", $blob);
+
+		$sendto->reply($msg);
+	}
+
+	/**
+	 * @HandlesCommand("subway")
+	 * @Matches("/^subway$/i")
+	 */
+	public function subwayCommand($message, $channel, $sender, $sendto, $args) {
+		$blob  = $this->findRaidLoot('Subway', 'Armor');
+		$blob .= $this->findRaidLoot('Subway', 'Weapons');
+		$blob .= $this->findRaidLoot('Subway', 'Belt');
+		$blob .= $this->findRaidLoot('Subway', 'HUD/Utils');
+		$msg = $this->text->makeBlob("Subway Loot", $blob);
 
 		$sendto->reply($msg);
 	}
