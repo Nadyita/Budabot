@@ -372,7 +372,7 @@ INSERT INTO raid_loot (raid, category, ql, name, comment, multiloot, aoid) VALUE
 ('Pande', 'Libra', 250, 'Urbane Pants of Libra', '', 1, NULL),
 ('Pande', 'Libra', 250, 'Aim of Libra', '', 1, NULL),
 ('Pande', 'Libra', 250, 'Well Balanced Spirit Helper of Libra', '', 1, NULL),
-('Pande', 'Libra', 1, 'Activation Code', '', 1, NULL),
+('Pande', 'Libra', 1, 'Activation Code', '', 6, NULL),
 ('Pande', 'Pisces', 250, 'Cosmic Guide of the Pisces', '', 1, NULL),
 ('Pande', 'Pisces', 250, 'Octopus Contraption of the Pisces', '', 1, NULL),
 ('Pande', 'Pisces', 250, 'Soul Mark of Pisces', '', 1, NULL),
@@ -447,21 +447,12 @@ INSERT INTO raid_loot (raid, category, ql, name, comment, multiloot, aoid) VALUE
 ('Pyramid of Home', 'Weapons', 300, 'Corrupted Lady of Wisdom', 'MA', 1, 302947),
 ('Pyramid of Home', 'Weapons', 300, 'Corrupted Lord of Wisdom', 'MA', 1, 302945),
 
-('Temple of the Three Winds', 'Rings', 1, 'Bloodthrall Ring', '', 1, NULL),
-('Temple of the Three Winds', 'Rings', 1, 'Notum Ring of the Three', 'green: BM+MM', 1, 305488),
-('Temple of the Three Winds', 'Rings', 1, 'Notum Ring of the Three', 'red: MC+TS', 1, 305489),
-('Temple of the Three Winds', 'Rings', 1, 'Notum Ring of the Three', 'orange: PM+SI', 1, 305490),
-('Temple of the Three Winds', 'Rings', 1, 'Ring of Blighted Flesh', '', 1, NULL),
-('Temple of the Three Winds', 'Rings', 1, 'Ring of Purifying Flame', '', 1, NULL),
-('Temple of the Three Winds', 'Rings', 1, 'Ring of the Coiled Serpent', '', 1, NULL),
 ('Temple of the Three Winds', 'Armor', 1, 'Desecrated Flesh', '', 1, NULL),
 ('Temple of the Three Winds', 'Armor', 1, 'Fist of Heavens', 'MA', 1, NULL),
 ('Temple of the Three Winds', 'Armor', 1, 'Gartua''s Second Coat', '', 1, NULL),
 ('Temple of the Three Winds', 'Armor', 1, 'Mountain Razing Gauntlets', '', 1, NULL),
-('Temple of the Three Winds', 'Armor', 1, 'Sanguine Vambrace', '', 1, NULL),
 ('Temple of the Three Winds', 'Armor', 1, 'Strength of the Immortal', '', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Blessing of the Gripper', '', 1, NULL),
-('Temple of the Three Winds', 'Symbiants', 300, 'Ethereal Embrace', 'Shade', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Grasp of the Immortal', 'MA', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Inner Peace', '', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Keeper''s Vigor', '', 1, NULL),
@@ -469,6 +460,7 @@ INSERT INTO raid_loot (raid, category, ql, name, comment, multiloot, aoid) VALUE
 ('Temple of the Three Winds', 'Symbiants', 1, 'Notum Graft', '', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Vision of the Heretic', '', 1, NULL),
 ('Temple of the Three Winds', 'Symbiants', 1, 'Wit of the Immortal', 'MP, NT', 1, NULL),
+('Temple of the Three Winds', 'Symbiants', 300, 'Ethereal Embrace', 'Shade', 1, NULL),
 ('Temple of the Three Winds', 'Misc', 1, 'Knowledge of the Immortal One', '+160 to tradeskills', 1, NULL),
 ('Temple of the Three Winds', 'Misc', 1, 'Sacred Text of the Immortal One', 'Doc', 1, NULL),
 ('Temple of the Three Winds', 'Misc', 1, 'Summoner''s Staff of Dismissal', 'MP, Crat, Engi', 1, NULL),
@@ -480,9 +472,59 @@ INSERT INTO raid_loot (raid, category, ql, name, comment, multiloot, aoid) VALUE
 ('Temple of the Three Winds', 'Weapons', 300, 'Ceremonial Blade', '1HE', 1, NULL),
 ('Temple of the Three Winds', 'Weapons', 300, 'Corrupted Edge', '2HE', 1, NULL),
 ('Temple of the Three Winds', 'Weapons', 300, 'Envoy to Chaos', 'Pistol', 1, NULL),
+('Temple of the Three Winds', 'Weapons', 300, 'Uklesh''s Talon', 'Piercing', 1, NULL),
 ('Temple of the Three Winds', 'Weapons', 1, 'Obsidian Desecrator', '2HE', 1, NULL),
-('Temple of the Three Winds', 'Weapons', 1, 'Sacred Chalice', 'Doc', 1, NULL),
-('Temple of the Three Winds', 'Weapons', 300, 'Uklesh''s Talon', 'Piercing', 1, NULL);
+('Temple of the Three Winds', 'Weapons', 1, 'Sacred Chalice', 'Doc', 1, NULL);
+
+-- GUPHs
+INSERT INTO raid_loot (raid, category, ql, name, comment, multiloot, aoid) VALUES
+('Halloween', 'Griefing Uncle Pumpkin-Head',   1, 'Sparkling Freedom Arms 3927', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head',  10, 'Battered Freedom Arms 3927', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head',  40, 'Freedom Arms 3927a', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head',  44, 'Freedom Arms 3927', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head',  96, 'Freedom Arms 3927k', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Freedom Arms 3927k Ultra', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 108, 'Freedom Arms 3927 Notum', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 150, 'Freedom Arms 3927 Chapman', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 158, 'Freedom Arms 3927 Guerrilla', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 200, 'Freedom Arms 3927 G2', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Ai-X44 Android Head', 'QL1-200', 1, 152269),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'BBQ Shoulder Pillow', 'QL1-200', 1, 152258),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 175, 'Black Agent Cloak', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head',  25, 'Blue Baby Bronto Boots', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Bodum-Larga NCU', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Candied Fruit Armband', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Candy Cord', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Capsule of Thin Blood', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Carrier Craft', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Counterfeit Omni Epaulet', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 200, 'Extreme Low Light Targeting Scope', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Jones Energized Carbonan Helmet', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Metallic Hoop', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Nano Targeting Helper', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'NCU Robot Reed', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Neural Interpreting Nball - Handguns', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Omni Epaulet', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 175, 'Real Knickers Stockings', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head',  10, 'Reinforced Blackpants', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Ring of Endurance', 'QL1-300', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Ring of Essence', 'QL1-300', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head',  40, 'Starched Armbands', '', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Sunglasses of Syncopated Heartbeats', '', 1, 163631),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 100, 'Support Wire', 'QL1-200', 1, null),
+('Halloween', 'Griefing Uncle Pumpkin-Head', 175, 'White Agent Cloak', '', 1, null);
+
+-- HUPHs
+INSERT INTO raid_loot (raid, category, ql, name, comment, multiloot, aoid) VALUES
+('Halloween', 'Harvesting Uncle Pumpkin-Head',   1, 'Nano Crystal (Junior Pumpkin-Head)', '', 6, null);
+
+-- HUPHs
+INSERT INTO raid_loot (raid, category, ql, name, comment, multiloot, aoid) VALUES
+('Halloween', 'Solo Instance', 1, 'Freedom Arms 3927 Chameleon', 'Can drop from all special mobs', 1, null),
+('Halloween', 'Solo Instance', 1, 'Rabbit Ears - Black', 'Drops from boss mobs', 1, null),
+('Halloween', 'Solo Instance', 1, 'Rabbit Ears - Blue', 'Drops from boss mobs', 1, null),
+('Halloween', 'Solo Instance', 1, 'Scythe of the Harvester', 'Drops from end boss', 1, null),
+('Halloween', 'Solo Instance', 1, 'Beacon of the Harvester', 'Drops from end boss', 1, null);
 
 -- Subway 201+
 INSERT INTO raid_loot (raid, category, ql, name, comment, multiloot, aoid) VALUES
